@@ -1,0 +1,204 @@
+body{
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(21, 22, 22);
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+nav{
+    background-color: rgb(69, 67, 71);
+    padding: 5px;
+    
+}
+.first_nav{
+    width: 10%;
+}
+
+.first_nav img{
+    width: 10%;
+    animation-name: roll;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes roll{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+
+.second_nav{
+    width: 40%;
+    float: left;
+}
+
+.third_nav{
+    width: 50%;
+}
+.main_nav{
+    background-color: rgb(71, 73, 73);
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 10px 0;
+}
+.main_nav div{
+    margin: 0px 30px;
+}
+
+.main_nav div>ul{
+    text-align: center;
+    padding: 0;
+}
+.main_nav div>ul>li{
+    display: inline;
+    padding: 9px 15px;
+    margin: 0 25px;
+}
+.nav_dropdown{
+    display: inline-block;
+    position: relative;
+}
+.nav_dropdown > .nav_dropdown_content{
+    list-style-type: none;
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    width: fit-content;
+    padding: 10px 20px;
+    margin-top: 30px;
+    background-color: rgb(33, 34, 33);
+    border-radius: 7px;
+    border: 2px solid rgb(51, 52, 52);
+    transition: visibility .1s linear 0.2s
+}
+.nav_dropdown_content li{
+    display: block;
+    text-align: start;
+    margin-bottom: 10px;
+    padding: 9px;
+}
+.nav_dropdown_content li:last-child{
+    margin-bottom: 0;
+}
+.nav_dropdown:hover .nav_dropdown_content{
+    visibility: visible;
+}
+.hover_protection{
+    position: absolute;
+    left: 0px;
+    height: 40px;
+    width: 100%;
+}
+.main_nav div ul li:hover{
+    background-color: rgb(49, 50, 49);
+    border-radius: 50px;
+}
+.main_nav div ul li img{
+    width: 13px;
+    padding-left: 5px;
+    transition: transform .1s linear 0.2s;
+}
+.main_nav div ul li:hover img{
+    transform: rotate(-180deg);
+}
+.main_nav div img{
+    width: 60%;
+}
+
+.nav_line{
+    width: 100%;
+    height: 3px;
+    background-color: rgb(51, 52, 52);
+}
+
+#dropdown_content{
+    display: none;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header{
+    width: 100%;
+    top: auto;
+    left: 0;
+    margin: 30 auto;
+}
+
+header .img{
+    position: relative;
+    width: 100%;
+    background-image: url(img/thumbnail_500688_MBAS_23023_TMX_AUTUMN_SEASONAL__Katalog_Banner_3840x1707px_HU.webp);
+    height: 500px;
+    background-size: 100%;
+}
+
+header h1{
+    margin-top: 50px;
+}
+header p{
+    color: rgba(255, 255, 255, 0.568);
+}
+header a{
+    margin-bottom: 0;
+    background-color:  rgb(69, 67, 71);
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+    font-size: larger;
+}
+
+header a:hover{
+    background-color: rgba(0, 0, 255, 0.377);
+    font-size: large;
+}
+.content{
+    position: absolute;
+}
+
+.autokep{
+    margin: 10px;
+    animation-name: skew;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes skew{
+    0% {transform: skewX(0);}
+    50% {transform: skewX(-20deg);}
+    100% {transform: skewX(0deg);}
+}
+
+.autokep2{
+    margin: 10px;
+    animation-name: shake;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake{
+    0% {transform: skewY(20deg);}
+    50% {transform: skewY(-20deg);}
+    100% {transform: skewY(0deg);}
+}
+
+.autokep3{
+    margin: 10px;
+    animation-name: gardient;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes gardient{
+    0% {transform: skew(20deg, 20deg);}
+    50% {transform: skew(-20deg, -20deg);}
+    100% {transform: skew(20deg, 20deg);}
+}
